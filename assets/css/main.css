@@ -1,16 +1,83 @@
 body {
   font-family: "Source Code Pro", Arial, sans-serif;
   background-color: #303030;
-  color: #fff; }
+  color: #fff;
+  font-size: 1.4rem; }
 
 a {
   opacity: 0.8;
   transition: opacity .3s, background .3s; }
-  a:hover {
-    opacity: 1; }
-  a, a:hover {
+  a, a:link
+  a:hover, a:active, a:visited, a:focus {
     color: inherit;
     text-decoration: none; }
+  a:hover {
+    color: inherit;
+    text-decoration: none;
+    opacity: 1; }
+
+header {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 3rem 0; }
+  header .menu-toggle {
+    display: none; }
+  header h1 {
+    position: absolute;
+    display: inline-block;
+    width: 255px;
+    color: #e7d0ba;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.3rem; }
+    header h1 a {
+      opacity: 1; }
+  header .menu-itens {
+    font-size: 0;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    header .menu-itens li {
+      display: inline-block;
+      font-size: 1.2rem;
+      padding: 0.9rem 1.2rem; }
+    header .menu-itens .active {
+      opacity: 1; }
+  @media screen and (min-width: 1101px) {
+    header {
+      height: 105px; }
+    header h1 {
+      transform: translateX(-50%);
+      left: 50%;
+      position: absolute; }
+    header nav {
+      transform: translateY(-50%);
+      top: 50%;
+      position: relative; }
+      header nav:before, header nav:after {
+        content: "";
+        display: table; }
+      header nav:after {
+        clear: both; }
+    header .menu-itens {
+      display: block;
+      width: 50%;
+      float: left; }
+    header .menu-itens-left {
+      text-align: right;
+      padding-right: 165px; }
+    header .menu-itens-right {
+      text-align: left;
+      padding-left: 165px; } }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
   text-transform: uppercase;
@@ -25,10 +92,159 @@ main h3 {
   font-size: 3.5rem; }
 
 .container {
-  max-width: 1024px; }
+  max-width: 1024px;
+  position: relative;
+  z-index: 1;
+  padding: 68px 30px; }
+  .container h2, .container h3 {
+    padding-bottom: 17px; }
+  .container p {
+    padding-bottom: 20px; }
+
+section + section {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 .btn {
   border-radius: 0;
-  border: 2px; }
+  border: 2px solid #fff;
+  background: transparent;
+  text-transform: uppercase;
+  opacity: 1; }
+  .btn.btn-default {
+    color: #fff; }
+    .btn.btn-default:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: #fff; }
+  .btn.btn-lg {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    padding: 2.1rem 3.5rem; }
+
+#inicio {
+  background-image: url(../images/bg-inicio.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative; }
+  #inicio .bg-overlay {
+    background: rgba(16, 8, 6, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  #inicio .container {
+    padding-top: 25%;
+    padding-bottom: 15%; }
+  #inicio .btn {
+    margin-top: 2.2rem; }
+  #inicio p {
+    margin-top: 3.2rem;
+    text-transform: uppercase;
+    font-size: 1.6rem; }
+
+.projetos-list,
+.members-photos-list,
+.parceiros-list {
+  padding-top: 50px; }
+  .projetos-list .img-responsive,
+  .members-photos-list .img-responsive,
+  .parceiros-list .img-responsive {
+    margin: 0 auto; }
+  .projetos-list li,
+  .members-photos-list li,
+  .parceiros-list li {
+    padding-bottom: 10px; }
+
+.members-list {
+  padding-top: 30px; }
+
+#projetos p,
+#projetistas p,
+#equipe p,
+#parceiros p {
+  margin-top: 3.2rem;
+  max-width: 600px;
+  margin: 0 auto; }
+
+#projetistas .btn-youtube {
+  color: #e7d0ba;
+  border-color: #e7d0ba; }
+  #projetistas .btn-youtube:hover {
+    background-color: #e7d0ba;
+    color: #1d1d1d; }
+
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  header {
+    padding-top: 8rem; }
+  header h1 {
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+    position: absolute;
+    top: 3rem; }
+
+  #inicio .container {
+    padding-top: 45%;
+    padding-bottom: 35%; } }
+@media screen and (max-width: 768px) {
+  main h2 {
+    font-size: 3.6rem; }
+  main h3 {
+    font-size: 3.1rem; }
+
+  header .menu-toggle {
+    display: block;
+    position: fixed;
+    padding: 10px;
+    left: 20px;
+    top: 20px;
+    font-size: 22px;
+    z-index: 2;
+    background-color: #343433; }
+  header h1 {
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+    position: absolute;
+    top: 30px;
+    width: 100%; }
+  header nav {
+    background: rgba(52, 52, 51, 0.97);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s; }
+
+  .open nav {
+    opacity: 1; }
+
+  #inicio h1 {
+    font-size: 7.2rem;
+    letter-spacing: normal; }
+  #inicio .container {
+    padding-top: 40%;
+    padding-bottom: 20%; } }
+@media screen and (max-width: 450px) {
+  main h2 {
+    font-size: 2.6rem; }
+  main h3 {
+    font-size: 2.1rem; }
+
+  header h1 {
+    font-size: 1.2rem; }
+
+  #inicio h1 {
+    font-size: 4.2rem;
+    letter-spacing: normal; }
+
+  .btn.btn-lg {
+    padding: 1rem 1.2rem; } }
 
 /*# sourceMappingURL=main.css.map */

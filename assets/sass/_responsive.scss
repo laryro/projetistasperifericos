@@ -1,0 +1,111 @@
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+	header {
+		& {
+			padding-top: 8rem;
+		}
+		h1 {
+			@include centralizeX;
+			position: absolute;
+			top: 3rem;
+		}
+	}
+
+	#inicio {
+		.container {
+			padding-top: 45%;
+			padding-bottom: 35%;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	main {
+		h2 {
+			font-size: 3.6rem;
+		}
+
+		h3 {
+			font-size: 3.1rem;
+		}	
+	}
+	header {
+		.menu-toggle {
+			display: block;
+			position: fixed;
+			padding: 10px;
+			left: 20px;
+			top: 20px;
+			font-size: 22px;
+			z-index: 2;
+			background-color: #343433;
+		}
+
+		h1 {
+			@include centralizeX;
+			position: absolute;
+			top: 30px;
+			width: 100%;
+		}
+
+		nav {
+			background: rgba(52,52,51,.97);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .2s;
+		}
+	}
+
+	.open {
+		nav {
+			opacity: 1;
+		}
+	}
+
+	#inicio {
+		h1 {
+			font-size: 7.2rem;
+			letter-spacing: normal;
+
+		}
+		.container {
+			padding-top: 40%;
+			padding-bottom: 20%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	main {
+		h2 {
+			font-size: 2.6rem;
+		}
+
+		h3 {
+			font-size: 2.1rem;
+		}	
+	}
+
+	header { 
+		h1 {
+			font-size: 1.2rem;
+		}
+	}
+	#inicio {
+		h1 {
+			font-size: 4.2rem;
+			letter-spacing: normal;
+
+		}
+	}
+
+	.btn {
+		&.btn-lg {
+			padding: 1rem 1.2rem;
+		}
+	}
+}

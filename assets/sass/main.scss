@@ -4,20 +4,111 @@ body {
 	font-family: "Source Code Pro", Arial, sans-serif;
 	background-color: #303030;
 	color: #fff;
+	font-size: 1.4rem;
 }
 
 a {
 	opacity: 0.8;
 	transition: opacity .3s, background .3s;
 
-	&:hover {
-		opacity: 1;
-	}
 	&,
-	&:hover  {
+	&:link
+	&:hover,
+	&:active,
+	&:visited,
+	&:focus {
 		color: inherit;
 		text-decoration: none;
-	}	
+	}
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+		opacity: 1;
+	}
+
+}
+
+header {
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	padding: 3rem 0;
+
+	.menu-toggle {
+		display: none;
+	}
+
+	h1 {
+		position: absolute;
+		display: inline-block;
+		width: 255px;
+		color: #e7d0ba;
+		vertical-align: middle;
+		margin: 0;
+		font-size: 1.8rem;
+		line-height: 2.3rem;
+		letter-spacing: 0.3rem;
+
+
+		a {
+			opacity: 1;
+		}
+	}
+
+	.menu-itens {
+		font-size: 0;
+		letter-spacing: 0.2rem;
+		display: inline-block;
+		vertical-align: middle;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			font-size: 1.2rem;
+			padding: 0.9rem 1.2rem;
+		}
+
+		.active {
+			opacity: 1;
+		}
+	}
+
+	@media screen and (min-width: 1101px) {
+		& {
+			height: 105px;
+		}
+
+		h1 {
+			@include centralizeX(absolute);
+		}
+
+		nav {
+			@include clearfix;
+			@include centralizeY();
+		}
+
+		.menu-itens {
+			display: block;
+			width: 50%;
+			float: left;
+		}
+
+		.menu-itens-left {
+			text-align: right;
+			padding-right: 165px;
+		}
+
+		.menu-itens-right {
+			text-align: left;
+			padding-left: 165px;
+		}
+	}
 }
 
 main {
@@ -43,9 +134,124 @@ main {
 
 .container {
 	max-width: 1024px;
+	position: relative;
+	z-index: 1;
+	padding: 68px 30px;
+
+	h2, h3 {
+		padding-bottom: 17px;
+	}
+
+	p {
+		padding-bottom: 20px;
+	}
+}
+
+section + section {
+	border-top: 1px solid rgba(0,0,0,.1);
 }
 
 .btn {
 	border-radius: 0;
-	border: 2px
+	border: 2px solid #fff;
+	background: transparent;
+	text-transform: uppercase;
+	opacity: 1;
+
+	&.btn-default {
+		color: #fff;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+			border-color: #fff;
+		}
+	}
+
+	&.btn-lg {
+		font-size: 1.5rem;
+		letter-spacing: 0.3rem;
+		padding: 2.1rem 3.5rem;
+	}
 }
+
+#inicio {
+	background: {
+		image: url(../images/bg-inicio.jpg);
+		repeat: no-repeat;
+		position: top center;
+		size: cover;
+	};
+	position: relative;
+
+	.bg-overlay {
+		background: rgba(16,8,6,.4);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.container {
+		padding-top: 25%;
+		padding-bottom: 15%;
+	}
+
+	.btn {
+		margin-top: 2.2rem;
+	}
+
+	p {
+		margin-top: 3.2rem;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+	}
+}
+
+.projetos-list,
+.members-photos-list,
+.parceiros-list {
+	padding-top: 50px;
+
+	.img-responsive {
+		margin: 0 auto;
+	}
+
+	li {
+		padding-bottom: 10px;
+	}
+}
+
+.members-list {
+	padding-top: 30px;
+}
+
+#projetos,
+#projetistas,
+#equipe,
+#parceiros {
+	p {
+		margin-top: 3.2rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+}
+
+#projetistas {
+
+	.btn-youtube {
+		color: #e7d0ba;
+		border-color: #e7d0ba;
+
+		&:hover {
+			background-color: #e7d0ba;
+			color: #1d1d1d;
+		}
+	}
+}
+
+
+@import "responsive";

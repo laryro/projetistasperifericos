@@ -12,44 +12,13 @@
 		<script src="https://use.fontawesome.com/255ef94ca3.js"></script>
 	</head>
 	<body class="text-center">
-
-	<!-- 	<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<i class="fa fa-bars"></i>
-					</button>
-					<a class="navbar-brand" href="#">Project name</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div><!-/.nav-collapse 
-			</div>
-		</nav>
- -->
-
 		<header>
-			<nav class="container">
-				<ul class="list-inline">
+			<a href="#" class="menu-toggle"><i class="fa fa-bars"></i></a>
+			<h1><a href="/">Projetistas Periféricos</a></h1>
+			<nav>
+				<ul class="menu-itens menu-itens-left">
 					<li>
-						<a href="#inicio">Início</a>
+						<a href="#inicio" class="active">Início</a>
 					</li>
 					<li>
 						<a href="#projetos">Projetos</a>
@@ -58,8 +27,7 @@
 						<a href="#projetistas">Projetistas</a>
 					</li>
 				</ul>
-				<h1><a href="/">Projetistas Periféricos</a></h1>
-				<ul class="list-inline">
+				<ul class="menu-itens menu-itens-right">
 					<li>
 						<a href="#equipe">Equipe</a>
 					</li>
@@ -77,10 +45,11 @@
 		</header>
 		<main>
 			<section id="inicio">
+				<div class="bg-overlay"></div>
 				<div class="container">
 					<h1>Projetistas Periféricos</h1>
 					<a href="#" class="btn btn-default btn-lg">Colabore com o projeto</a>
-					<a href="#">Design na periferia</a>
+					<p>Design na periferia</p>
 				</div>
 			</section>
 			<section id="projetos">
@@ -88,10 +57,10 @@
 					<h2>O que fazemos</h2>
 					<p>Projetamos soluções para as demandas da nossa realidade, conheça alguns dos nossos projetos:</p>
 					<ul class="projetos-list list-inline row">
-						<li class="col-sm-3"><img class="img-responsive" src="assets/images/projeto_projetistas-perifericos.png"></li>
-						<li class="col-sm-3"><img class="img-responsive" src="assets/images/projeto_marias-fabrica.png"></li>
-						<li class="col-sm-3"><img class="img-responsive" src="assets/images/projeto_escola-funk.png"></li>
-						<li class="col-sm-3"><img class="img-responsive" src="assets/images/projeto_modo-de-fazer.png"></li>
+						<li class="col-sm-3 col-xs-6"><img class="img-responsive" src="assets/images/projeto_projetistas-perifericos.png"></li>
+						<li class="col-sm-3 col-xs-6"><img class="img-responsive" src="assets/images/projeto_marias-fabrica.png"></li>
+						<li class="col-sm-3 col-xs-6"><img class="img-responsive" src="assets/images/projeto_escola-funk.png"></li>
+						<li class="col-sm-3 col-xs-6"><img class="img-responsive" src="assets/images/projeto_modo-de-fazer.png"></li>
 					</ul>
 				</div>
 			</section>
@@ -99,14 +68,14 @@
 				<div class="container">
 					<h2>Projetistas</h2>
 					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2">					
+						<div class="col-md-10 col-md-offset-1">					
 							<div class="embed-responsive embed-responsive-4by3">
 								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mBRZk65FW30" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
 					<h3>Veja mais videos</h3>
-					<a href="#" class="btn btn-default btn-youtube" title="Youtube - Projetistas Periféricos">Nosso Youtube <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+					<a href="#" class="btn btn-default btn-lg btn-youtube" title="Youtube - Projetistas Periféricos">Nosso Youtube <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 				</div>
 			</section>
 			<section id="equipe">
@@ -120,10 +89,10 @@
 						<li>Franklin Lacerda / Tio Patinhas</li>
 					</ul>
 					<ul class="members-photos-list list-inline row">
-						<li class="col-sm-3"><a href="https://www.facebook.com/coput" target="_blank"><img class="img-responsive" src="assets/images/equipe_miguel.jpg"></a></li>
-						<li class="col-sm-3"><a href="https://www.facebook.com/narabs" target="_blank"><img class="img-responsive" src="assets/images/equipe_nara.jpg"></a></li>
-						<li class="col-sm-3"><a href="https://www.facebook.com/victor.vincenzoscopacasa" target="_blank"><img class="img-responsive" src="assets/images/equipe_victor.jpg"></a></li>
-						<li class="col-sm-3"><a href="https://www.facebook.com/franklin.olacerda" target="_blank"><img class="img-responsive" src="assets/images/equipe_franklin.jpg"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="https://www.facebook.com/coput" target="_blank"><img class="img-responsive" src="assets/images/equipe_miguel.jpg"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="https://www.facebook.com/narabs" target="_blank"><img class="img-responsive" src="assets/images/equipe_nara.jpg"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="https://www.facebook.com/victor.vincenzoscopacasa" target="_blank"><img class="img-responsive" src="assets/images/equipe_victor.jpg"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="https://www.facebook.com/franklin.olacerda" target="_blank"><img class="img-responsive" src="assets/images/equipe_franklin.jpg"></a></li>
 					</ul>
 				</div>
 			</section>
@@ -137,10 +106,10 @@
 				<div class="container">
 					<h2>Com quem fazemos</h2>
 					<ul class="parceiros-list list-inline row">
-						<li class="col-sm-3"><a href="http://www.computerclubhouse.org/" target="_blank" title="The Clubhouse Network"><img class="img-responsive" src="assets/images/parceiro_clubhouse.png" alt="The Clubhouse Network"></a></li>
-						<li class="col-sm-3"><a href="http://naveavela.com.br/" target="_blank" title="Nave à Vela"><img class="img-responsive" src="assets/images/parceiro_nave-vela.png" alt="Nave à Vela"></a></li>
-						<li class="col-sm-3"><a href="http://www.fabricadeideiasbrasileiras.com.br/" target="_blank" title="FIB - Fábrica de Ideias Brasileiras"><img class="img-responsive" src="assets/images/parceiro_fabrica-ideias-brasileiras.png" alt="FIB - Fábrica de Ideias Brasileiras"></a></li>
-						<li class="col-sm-3"><a href="https://www.colab.re/" target="_blank" title="Colab.re"><img class="img-responsive" src="assets/images/parceiro_colab.png" alt="Colab.re"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="http://www.computerclubhouse.org/" target="_blank" title="The Clubhouse Network"><img class="img-responsive" src="assets/images/parceiro_clubhouse.png" alt="The Clubhouse Network"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="http://naveavela.com.br/" target="_blank" title="Nave à Vela"><img class="img-responsive" src="assets/images/parceiro_nave-vela.png" alt="Nave à Vela"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="http://www.fabricadeideiasbrasileiras.com.br/" target="_blank" title="FIB - Fábrica de Ideias Brasileiras"><img class="img-responsive" src="assets/images/parceiro_fabrica-ideias-brasileiras.png" alt="FIB - Fábrica de Ideias Brasileiras"></a></li>
+						<li class="col-sm-3 col-xs-6"><a href="https://www.colab.re/" target="_blank" title="Colab.re"><img class="img-responsive" src="assets/images/parceiro_colab.png" alt="Colab.re"></a></li>
 					</ul>
 				</div>
 			</section>

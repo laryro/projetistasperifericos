@@ -1,0 +1,29 @@
+@mixin centralizeY($position: relative) {
+	transform: translateY(-50%);
+	top: 50%;
+	position: $position;
+}
+
+@mixin centralizeX($position: relative) {
+	transform: translateX(-50%);
+	left: 50%;
+	position: $position;
+}
+
+@mixin centralizeXY($position: relative) {
+	transform: translateXY(-50%);
+	left: 50%;
+	top: 50%;
+	position: $position;
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

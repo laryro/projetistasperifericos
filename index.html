@@ -119,17 +119,17 @@
 					<form id="contact-form">
 						<div class="form-group">
 							<label for="nome">Nome *</label>
-							<input type="text" required="required" data-error="Campo Nome é obrigatório" class="form-control" id="nome">
+							<input type="text" name="nome" required="required" data-error="Campo Nome é obrigatório" class="form-control" id="nome">
 							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
 							<label for="email">E-mail *</label>
-							<input type="email" required="required" data-error="Campo E-mail é obrigatório" class="form-control" id="email">
+							<input type="email" name="email" required="required" data-error="Campo E-mail é obrigatório" class="form-control" id="email">
 							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
 							<label for="assunto">Assunto *</label>
-							<input type="text" required="required" data-error="Campo Assunto é obrigatório" class="form-control" id="assunto">
+							<input type="text" name="assunto" required="required" data-error="Campo Assunto é obrigatório" class="form-control" id="assunto">
 							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
@@ -137,6 +137,7 @@
 							<textarea name="mensagem" required="required" data-error="Campo Mensagem é obrigatório" id="mensagem" class="form-control"></textarea>
 							<div class="help-block with-errors"></div>
 						</div>
+						<div class="messages"></div>
 						<div class="text-center">
 							<button type="submit" class="btn btn-default">Enviar</button>
 						</div>

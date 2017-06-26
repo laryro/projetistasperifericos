@@ -10,7 +10,7 @@ $from = 'Projetistas Periféricos <contato@projetistasperifericos.org>';
 $sendTo = 'Laryssa Rocha <laryssa.vrocha@gmail.com>, Projetistas Periféricos <contato@projetistasperifericos.org>';
 
 // subject of the email
-$subject = 'Contato - Projetistas PeriféricosP';
+$subject = 'Contato - Projetistas Periféricos';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email

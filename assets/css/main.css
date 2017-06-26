@@ -201,6 +201,7 @@ section + section {
   background-position: top center;
   background-size: cover; }
   #contato .container {
+    padding: 100px 30px;
     max-width: 680px; }
 
 footer {
@@ -209,6 +210,18 @@ footer {
   footer .social-links {
     font-size: 23px; }
 
+@media screen and (min-width: 769px) {
+  .fixed header h1 {
+    display: none; }
+  .fixed nav {
+    width: 100%;
+    position: fixed;
+    background-color: #343433;
+    transform: none;
+    top: 0; }
+    .fixed nav .menu-itens-right,
+    .fixed nav .menu-itens-left {
+      padding: 0; } }
 @media screen and (min-width: 769px) and (max-width: 1100px) {
   header {
     padding-top: 8rem; }

@@ -149,7 +149,7 @@ label {
 	.form-control {
 		border-color: #f00;
 	}
-	
+
 	.help-block {
 		color: #f00;
 	}
@@ -292,6 +292,7 @@ section + section {
 	};
 
 	.container {
+	    padding: 100px 30px;
 		max-width: 680px;
 
 	}

@@ -20,6 +20,23 @@ $(function () {
 			window.location.hash = hash;
 		});
 	});
+    
+    var initialPos = $(window).scrollTop();
+    if (initialPos >= $('#projetos').offset().top - 100) {
+        $('body').addClass('fixed');
+    } else {
+        $('body').removeClass('fixed');
+    }
+
+    $(window).on('scroll', function(event) {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= $('#projetos').offset().top - 100) {
+            $('body').addClass('fixed');
+        } else {
+            $('body').removeClass('fixed');
+        }
+    });
 
     // init the validator
     // validator files are included in the download package

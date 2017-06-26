@@ -2,6 +2,25 @@
 
 $(function () {
 
+	$('.menu-toggle').on('click', function(event) {
+		event.preventDefault();
+
+		$('body').toggleClass('open');
+	});
+
+	$('.menu-itens a').on('click', function (event) {
+		event.preventDefault();
+		var hash = $(this).attr('href');
+
+		$('body').removeClass('open');
+
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 800, function(){
+			window.location.hash = hash;
+		});
+	});
+
     // init the validator
     // validator files are included in the download package
     // otherwise download from http://1000hz.github.io/bootstrap-validator
@@ -44,7 +63,7 @@ $(function () {
             return false;
         }
     });
-    
+
     var feed = new Instafeed({ 
 		get: 'user', 
 		userId: '4204114729', 

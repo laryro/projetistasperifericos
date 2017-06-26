@@ -144,6 +144,17 @@ label {
 		box-shadow: none;
 	}
 }
+
+.has-error {
+	.form-control {
+		border-color: #f00;
+	}
+	
+	.help-block {
+		color: #f00;
+	}
+}
+
 .container {
 	max-width: 1024px;
 	position: relative;

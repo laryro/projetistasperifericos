@@ -101,6 +101,11 @@ label {
     background-color: #FFF;
     box-shadow: none; }
 
+.has-error .form-control {
+  border-color: #f00; }
+.has-error .help-block {
+  color: #f00; }
+
 .container {
   max-width: 1024px;
   position: relative;
@@ -232,6 +237,8 @@ footer {
     font-size: 22px;
     z-index: 2;
     background-color: #343433; }
+    header .menu-toggle .fa-close {
+      display: none; }
   header h1 {
     transform: translateX(-50%);
     left: 50%;
@@ -248,10 +255,25 @@ footer {
     height: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: opacity .2s; }
+    transition: opacity .2s;
+    padding-top: 100px; }
+  header .menu-itens {
+    display: block; }
+    header .menu-itens li {
+      font-size: 25px;
+      display: block; }
 
-  .open nav {
-    opacity: 1; }
+  .open {
+    overflow: hidden; }
+    .open h1 {
+      position: fixed; }
+    .open nav {
+      pointer-events: auto;
+      opacity: 1; }
+    .open header .menu-toggle .fa-close {
+      display: block; }
+    .open header .menu-toggle .fa-bars {
+      display: none; }
 
   #inicio h1 {
     font-size: 7.2rem;

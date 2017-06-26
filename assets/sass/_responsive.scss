@@ -37,6 +37,10 @@
 			font-size: 22px;
 			z-index: 2;
 			background-color: #343433;
+
+			.fa-close {
+				display: none;
+			}
 		}
 
 		h1 {
@@ -56,13 +60,42 @@
 			opacity: 0;
 			pointer-events: none;
 			transition: opacity .2s;
+			padding-top: 100px;
+		}
+
+		.menu-itens {
+			display: block;
+			li {
+				font-size: 25px;
+				display: block;
+			}
 		}
 	}
 
 	.open {
+		overflow: hidden;
+
+		h1 {
+			position: fixed;
+		}
 		nav {
+			pointer-events: auto;
 			opacity: 1;
 		}
+
+		header {
+			.menu-toggle {
+				
+				.fa-close {
+					display: block;
+				}
+
+				.fa-bars {
+					display: none;
+				}
+			}
+		}
+
 	}
 
 	#inicio {

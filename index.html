@@ -14,8 +14,8 @@
 	</head>
 	<body class="text-center">
 		<header>
-			<a href="#" class="menu-toggle"><i class="fa fa-bars"></i></a>
-			<h1><a href="/">Projetistas Periféricos</a></h1>
+			<a href="#" class="menu-toggle"><i class="fa fa-bars"></i><i class="fa fa-close"></i></a>
+			<h1><a href="#">Projetistas Periféricos</a></h1>
 			<nav>
 				<ul class="menu-itens menu-itens-left">
 					<li>
@@ -119,19 +119,23 @@
 					<form id="contact-form">
 						<div class="form-group">
 							<label for="nome">Nome *</label>
-							<input type="text" class="form-control" id="nome">
+							<input type="text" required="required" data-error="Campo Nome é obrigatório" class="form-control" id="nome">
+							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
 							<label for="email">E-mail *</label>
-							<input type="email" class="form-control" id="email">
+							<input type="email" required="required" data-error="Campo E-mail é obrigatório" class="form-control" id="email">
+							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
 							<label for="assunto">Assunto *</label>
-							<input type="text" class="form-control" id="assunto">
+							<input type="text" required="required" data-error="Campo Assunto é obrigatório" class="form-control" id="assunto">
+							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
 							<label for="mensagem">Mensagem *</label>
-							<textarea name="mensagem" id="mensagem" class="form-control"></textarea>
+							<textarea name="mensagem" required="required" data-error="Campo Mensagem é obrigatório" id="mensagem" class="form-control"></textarea>
+							<div class="help-block with-errors"></div>
 						</div>
 						<div class="text-center">
 							<button type="submit" class="btn btn-default">Enviar</button>

@@ -14,9 +14,9 @@ $(function () {
 
 		$('body').removeClass('open');
 
-		$('html, body').animate({
+		$('html, body').stop().animate({
 			scrollTop: $(hash).offset().top
-		}, 800, function(){
+		}, 600, function(){
 			window.location.hash = hash;
 		});
 	});
@@ -27,6 +27,14 @@ $(function () {
     } else {
         $('body').removeClass('fixed');
     }
+    
+    setTimeout(function() {
+        if (!!location.hash && location.hash !== "") {
+            $('html, body').animate({
+                scrollTop: $(location.hash).offset().top
+            }, 600);
+        }
+    }, 500);
 
     $(window).on('scroll', function(event) {
         var scroll = $(window).scrollTop();

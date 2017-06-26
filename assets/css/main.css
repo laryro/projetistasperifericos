@@ -165,6 +165,9 @@ section + section {
 .members-list {
   padding-top: 30px; }
 
+#instafeed .instagram-image {
+  padding-bottom: 20px; }
+
 #projetos p,
 #projetistas p,
 #equipe p,

@@ -92,6 +92,9 @@ main h2 {
 main h3 {
   font-size: 3.5rem; }
 
+.form-control {
+  border-radius: 0; }
+
 .container {
   max-width: 1024px;
   position: relative;
@@ -176,6 +179,15 @@ section + section {
   #projetistas .btn-youtube:hover {
     background-color: #e7d0ba;
     color: #1d1d1d; }
+
+#contato {
+  text-align: left;
+  background-image: url(../images/bg-contato.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; }
+  #contato .container {
+    max-width: 680px; }
 
 @media screen and (min-width: 769px) and (max-width: 1100px) {
   header {

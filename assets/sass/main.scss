@@ -133,6 +133,10 @@ main {
 	}	
 }
 
+.form-control {
+	border-radius: 0;
+}
+
 .container {
 	max-width: 1024px;
 	position: relative;
@@ -251,6 +255,21 @@ section + section {
 			background-color: #e7d0ba;
 			color: #1d1d1d;
 		}
+	}
+}
+
+#contato {
+	text-align: left;
+	background: {
+		image: url(../images/bg-contato.jpg);
+		repeat: no-repeat;
+		position: top center;
+		size: cover;
+	};
+
+	.container {
+		max-width: 680px;
+
 	}
 }
 

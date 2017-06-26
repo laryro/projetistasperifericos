@@ -7,8 +7,8 @@
 
 var feed = new Instafeed({ 
 	get: 'user', 
-	userId: 'Inqu4dro_real', 
-	accessToken: '46c0976f0d4049f6955ce2a7718615b3',
+	userId: '4204114729', 
+	accessToken: '4204114729.1677ed0.1b275ac035254427bcc073596a9f8372',
 	sortBy: 'most-recent', 
 	limit: '12' 
 }); 

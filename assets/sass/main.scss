@@ -132,11 +132,18 @@ main {
 		font-size: 3.5rem;
 	}	
 }
-
-.form-control {
-	border-radius: 0;
+label {
+	font-weight: normal;
 }
 
+.form-control {
+	background-color: #fafafa;
+
+	&:focus {
+		background-color: #FFF;
+		box-shadow: none;
+	}
+}
 .container {
 	max-width: 1024px;
 	position: relative;
@@ -276,6 +283,15 @@ section + section {
 	.container {
 		max-width: 680px;
 
+	}
+}
+
+footer {
+	padding: 30px;
+	background-color: #100806;
+
+	.social-links {
+		font-size: 23px;
 	}
 }
 

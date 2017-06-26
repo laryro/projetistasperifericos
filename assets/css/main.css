@@ -92,8 +92,14 @@ main h2 {
 main h3 {
   font-size: 3.5rem; }
 
+label {
+  font-weight: normal; }
+
 .form-control {
-  border-radius: 0; }
+  background-color: #fafafa; }
+  .form-control:focus {
+    background-color: #FFF;
+    box-shadow: none; }
 
 .container {
   max-width: 1024px;
@@ -191,6 +197,12 @@ section + section {
   background-size: cover; }
   #contato .container {
     max-width: 680px; }
+
+footer {
+  padding: 30px;
+  background-color: #100806; }
+  footer .social-links {
+    font-size: 23px; }
 
 @media screen and (min-width: 769px) and (max-width: 1100px) {
   header {

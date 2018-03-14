@@ -4,17 +4,17 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Projetistas Periféricos <contato@projetistasperifericos.org>';
+$from = 'Projetistas Periféricos <Miguel_fjdahora@outlook.com>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Laryssa Rocha <laryssa.vrocha@gmail.com>, Projetistas Periféricos <contato@projetistasperifericos.org>';
+$sendTo = 'Laryssa Rocha <laryssa.vrocha@gmail.com>, Projetistas Periféricos <Miguel_fjdahora@outlook.com>';
 
 // subject of the email
 $subject = 'Contato - Projetistas Periféricos';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('nome' => 'Nome', 'email' => 'E-mail', 'assunto' => 'Assunto', 'mensagem' => 'Mensagem'); 
+$fields = array('nome' => 'Nome', 'email' => 'E-mail', 'assunto' => 'Assunto', 'mensagem' => 'Mensagem');
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Mensagem foi enviada com sucesso!';
@@ -33,11 +33,11 @@ try
 {
 
     if(count($_POST) == 0) throw new \Exception('Form is empty');
-            
-    $emailText = "Contato enviado pelo site\n=============================\n";
+
+    $emailText = "Contato enviado pelo site\n=============================\n\n";
 
     foreach ($_POST as $key => $value) {
-        // If the field exists in the $fields array, include it in the email 
+        // If the field exists in the $fields array, include it in the email
         if (isset($fields[$key])) {
             $emailText .= "$fields[$key]: $value\n";
         }
@@ -49,7 +49,7 @@ try
         'Reply-To: ' . $from,
         'Return-Path: ' . $from,
     );
-    
+
     // Send email
     mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
